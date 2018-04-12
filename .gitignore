@@ -1,0 +1,31 @@
+#####################
+# Vagrant Box Image #
+#####################
+*.box
+*.vagrant/
+
+############
+# VM Image #
+############
+*.vbox
+*.vbox-prev
+*.vmdk
+
+############
+# Packages #
+############
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+
+######################
+# Logs and databases #
+######################
+*.log
+
+
