@@ -1,0 +1,45 @@
+[Vagrant Hub WebSite Connect]
+https://app.vagrantup.com/boxes/search
+
+Click ubuntu/trusty64 - New
+
+# vagrant init ubuntu/trusty64
+# vagrant up
+
+# ls /root/vagrant_image/hub_ubuntu_ubuntu_14_04_vanilla_01/
+Vagrantfile
+
+# mkdir /root/vagrant_image/hub_ubuntu_ubuntu_14_04_vanilla_01/
+# cd /root/vagrant_image/hub_ubuntu_ubuntu_14_04_vanilla_01/
+# vagrant package
+# vagrant destroy -f
+# mv package.box hub_ubuntu_ubuntu_14_04_vanilla_01.box
+# cp hub_centos_centos_07_04_vanilla_02.box  /root/vagrant_image/box_init/
+# vi Vagrantfile
+
+# config.vm.box = "ubuntu/trusty64"
+config.vm.box = "hub_ubuntu_ubuntu_14_04_vanilla_01.box"
+config.vm.define "hub_ubuntu_ubuntu_14_04_vanilla_01"
+
+# cp Vagrantfile Vagrantfile_00_init
+
+# cp /root/vagrant_image/template/init.sh .
+
+# vi init.sh
+
+correct init.sh
+
+# ./init.sh
+
+Check it is running what you want
+
+# vagrant global-status --prune
+
+[Git Pull and Push]
+# mkdir vagrant_image
+# cd vagrant_image
+# git init
+# git remote add origin https://github.com/zero2sun/cloud_image.git
+# git remote -v
+# git pull origin master
+
